@@ -1,18 +1,12 @@
 ---
 layout: default
 ---
+<h1>{{ page.title }}</h1>
 
-<header>
-  <h1 class="post-title">{{ page.title }}</h1>
-</header>
-<div class="content">
-  {% include post-meta.html post=page %}
+{% if page.date %}
+<p class="meta">{{ page.date | date_to_string }}</p>
+{% endif %}
 
-  <div class="post-body">
-    {{ content }}
-    {% include post-tags.html post=page %}
-  </div>
-
-  {% include comments.html %}
-  {% include related_posts.html %}
+<div class="post">
+  {{ content }}
 </div>
