@@ -1,3 +1,10 @@
+# Site Settings
 name: Tim Fitzgerald
+
+# Build Settings
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
+
+exclude:
+  - Gemfile
+  - Gemfile.lock
