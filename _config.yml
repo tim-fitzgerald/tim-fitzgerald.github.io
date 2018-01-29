@@ -1,6 +1,8 @@
 # Site Settings
 name: Tim Fitzgerald
 
+#style: main.css
+
 # Build Settings
 markdown: kramdown
 permalink: /blog/:year/:month/:day/:title
