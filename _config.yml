@@ -1,7 +1,7 @@
 # Site Settings
 name: Tim Fitzgerald
 
-#style: main.css
+#style: styles
 
 # Build Settings
 markdown: kramdown
