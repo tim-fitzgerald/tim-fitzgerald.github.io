@@ -1,17 +1,3 @@
-<<<<<<< HEAD
-# Site Settings
-name: Tim Fitzgerald
-
-#style: styles
-
-# Build Settings
-markdown: kramdown
-permalink: /blog/:year/:month/:day/:title
-
-exclude:
-  - Gemfile
-  - Gemfile.lock
-=======
 # Dependencies
 markdown:         kramdown
 highlighter:      rouge
@@ -50,4 +36,3 @@ sidebar_blog_link:  '/blog'   # By default, your home page is your blog
                                 # to enable a separate blog link.
 github:
   repo:             https://github.com/fimtitzgerald
->>>>>>> 2bbeee8142f2f0838da9e148f41466babe200783

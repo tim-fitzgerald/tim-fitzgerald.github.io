@@ -1,8 +1,3 @@
-<<<<<<< HEAD
-_site/
-Gemfile
-Gemfile.lock
-=======
 # Ignore docs files
 _gh_pages
 _site
@@ -52,4 +47,3 @@ Gemfile.lock
 _config.dev.yml
 .vscode
 *.gem
->>>>>>> 2bbeee8142f2f0838da9e148f41466babe200783
