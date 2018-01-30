@@ -1,4 +1,5 @@
 <!DOCTYPE html>
+<<<<<<< HEAD
 	<html>
 		<head>
 			<title>{{ page.title }}</title>
@@ -27,3 +28,20 @@
 			</footer>
 		</body>
 	</html>
+=======
+<html lang="en-us">
+
+  {% include head.html %}
+
+  <body class="{{ page.layout }}{% if page.url == '/' %} home{% endif %}">
+
+    {% include sidebar.html %}
+
+    <main class="container">
+      {{ content }}
+    </main>
+
+    {% include custom-foot.html %}
+  </body>
+</html>
+>>>>>>> 2bbeee8142f2f0838da9e148f41466babe200783
