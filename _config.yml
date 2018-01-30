@@ -3,7 +3,7 @@ markdown:         kramdown
 highlighter:      rouge
 
 # Setup
-title:            Tim Fitzgerald
+title:            tim fitzgerald
 tagline:          'A MacAdmin Blog'
 description:      'I might be right about something eventually.'
 url:              https://fimtitzgerald.github.io

@@ -1,10 +1,10 @@
 body {
     margin: 60px auto;
     width: 70%;
-    font-family: "Abril Fatface", Arial, sans-serif;
+    
 }
 nav ul, footer ul {
-    font-family: "Abril Fatface";
+    
     padding: 0px;
     list-style: none;
     font-weight: bold;
@@ -22,7 +22,6 @@ a:hover {
 }
 h1 {
     font-size: 3em;
-    font-family: "Abril Fatface", Arial, sans-serif;
 }
 p {
     font-size: 1.5em;
@@ -37,10 +36,10 @@ footer {
 ul.posts { 
     margin: 20px auto 40px; 
     font-size: 1.5em;
-    font-family: "Abril Fatface", Arial, sans-serif;
+    
 }
 
 ul.posts li {
     list-style: none;
-    font-family: "Abril Fatface", Arial, sans-serif;
+    
 }
