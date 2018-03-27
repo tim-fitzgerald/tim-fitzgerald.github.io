@@ -1,0 +1,21 @@
+- skill:
+  name: Python 
+  level: 75%
+
+- skill:
+  name: Internal Network Infrastructure
+  level: 85%
+
+- skill:
+  name: Cloud Network Infrastructure (AWS)
+  level: 50%
+
+- skill:
+  name: SSO & Identity Management 
+  level: 95%
+
+- skill:
+  name: MDM & DEP
+  level: 95%
+
+  
