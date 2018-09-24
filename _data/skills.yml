@@ -3,6 +3,10 @@
   level: 75%
 
 - skill:
+  name: Go
+  level: 60%
+
+- skill:
   name: Internal Network Infrastructure
   level: 85%
 
