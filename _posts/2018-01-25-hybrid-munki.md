@@ -60,7 +60,7 @@ Under `Distribution Settings` you'll need to specify your Alternate Domain Name 
 
 ## Configuring the client. 
 
-From here on out we are essentially following the steps for Aaron Burchfields [Cloudfront Middleware][3] again. I recommend cloning his repo and using the included Makefile to build an installer. Install this .pkg on a test client and redirect their `SoftwareRepoURL` preference to the FQDN for our Cloudfront distribution (i.e. munki.example.com). You should be able to run `sudo managedsoftwareupdate --checkonly -vvv` now and see the modified headers being created by the middleware script and the signed URL being send to Cloudfront. All going well your client will begin to pull any required software from the repo. 
+From here on out we are essentially following the steps for Aaron Burchfields [Cloudfront Middleware][3] again. I recommend cloning his repo and using the included Makefile to build an installer. Install this .pkg on a test client and redirect their `SoftwareRepoURL` preference to the FQDN for our Cloudfront distribution (i.e. munki.example.com). You should be able to run `sudo managedsoftwareupdate --checkonly -vvv` now and see the modified headers being created by the middleware script and the signed URL being sent to Cloudfront. All going well your client will begin to pull any required software from the repo. 
 
 ## That's all for now. 
 
