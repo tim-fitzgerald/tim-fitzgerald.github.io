@@ -4,7 +4,7 @@
 
 - skill:
   name: Go
-  level: 60%
+  level: 75%
 
 - skill:
   name: Internal Network Infrastructure
@@ -12,7 +12,7 @@
 
 - skill:
   name: Cloud Network Infrastructure (AWS)
-  level: 50%
+  level: 65%
 
 - skill:
   name: SSO & Identity Management 
