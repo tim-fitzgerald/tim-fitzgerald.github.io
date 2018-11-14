@@ -15,6 +15,10 @@
   level: 65%
 
 - skill:
+  name: Munki
+  level: 100%
+
+- skill:
   name: SSO & Identity Management 
   level: 95%
 
