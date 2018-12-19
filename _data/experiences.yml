@@ -1,6 +1,13 @@
 - experience:
+  role: Senior Systems Administrator
+  time: November 2018 - Present
+  company: Unbounce - Vancouver, B.C.
+  details: "Responsible for technical direction of the I.T. team in creating and choosing solutions and tooling.
+  Actively leading design of infrastructure to support the companies employees."
+
+- experience:
   role: Systems Administrator
-  time: May 2016 - Present
+  time: May 2016 - November 2018
   company: Unbounce - Vancouver, B.C.
   details: "Responsible for the introduction, management, and scaling of client platform services with a focus on automation and a DevOps style workflow.
   Involved in large scale project roll outs for infrastructure and SaaS platforms (e.g. Okta, Munki, MDM/DEP). "
