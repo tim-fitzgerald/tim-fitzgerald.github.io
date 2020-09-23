@@ -1,0 +1,40 @@
+# Site settings
+title: tim fitzgerald
+description: 'I might be right about something eventually.'
+url: 'timfitzgerald.io'
+google_analytics: 'UA-126293600-1'
+# disqus_shortname: 'your-disqus-name'
+
+author:
+  name: 'Tim Fitzgerald'
+  email: hi@timfitzgerald.io
+  github_username:  tim-fitzgerald
+  linkedin_username:  timfitzgerald4
+
+defaults:
+  -
+    scope:
+      path: ''
+      type: 'posts'
+    values:
+        layout: 'post'
+
+# Build settings
+destination: _site
+paginate: 10
+permalink: /:year/:title/
+markdown: kramdown
+highlighter: rouge
+
+sass:
+    sass_dir: _sass
+    style: compressed
+
+kramdown:
+  # use Github Flavored Markdown
+  input: GFM
+  # do not replace newlines by <br>s
+  hard_wrap: false
+
+plugins: ['jekyll-paginate']
+exclude: ['README.md', 'Gemfile', 'Gemfile.lock', 'screenshot.png']
