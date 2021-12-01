@@ -1,6 +1,6 @@
 ---
 layout: post
-title: "Getting started with Terraform for Okta"
+title: "Getting started with Terraform for Okta - Part 1"
 date: 2021-11-30
 ---
 #### Introduction
