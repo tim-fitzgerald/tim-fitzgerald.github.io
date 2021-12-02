@@ -125,7 +125,7 @@ project_root
 	├── <other .tf files>
 ```
 
-The two `main.tf` files are identical except for `key` in the S3 configuration. As alluded to earlier - in the `resource/` folder we use the `resources/state` key, and in the `admins/` directory we use the `admins/state` key. These could also be something like `state_admins` and `state_resources` - it doesn't really matter so long as they're distinct.
+The two `main.tf` files are identical except for `key` in the S3 configuration. As alluded to earlier - in the `resources/` folder we use the `resources/state` key, and in the `admins/` directory we use the `admins/state` key. These could also be something like `state_admins` and `state_resources` - it doesn't really matter so long as they're distinct.
 
 #### Conclusion
 In this first part of our look at Terraform and Okta - we have created our basic configuration and created a pair of brand new resources in Okta. We have also talked about how we can empower non-SuperAdmins to contribute to our infrastructure without having full write permissions to sensitive elements within Okta. In the next post we will look at how we tackled importing existing resources from our Okta account into Terraform configurations and state. 
