@@ -87,7 +87,7 @@ Terraform will perform the following actions:
       + description = "A group for all Engineering Managers"
       + id          = (known after apply)
       + name        = "Engineering Managers"
-      + skip_users  = false
+      + skip_users  = true
     }
 
   # okta_group_rule.engineering_managers_group_rule will be created
@@ -108,7 +108,7 @@ This looks good to me so next I will apply these changes with `terraform apply`.
 This set of resources should now be managed by Terraform going forward to prevent drift from the configuration files (i.e. you should refrain from manual changes in the UI for this pair of resources). Existing groups not in Terraform can continue to be managed by the admin UI until they are imported (which we'll talk about in the next blog post.)
 
 #### Collaborating and Democratisation
-One of my main goals in moving our Okta infrastructure to Terraform was to allow non-Super Admins to contribute to resources that would be otherwise locked down, without incurring any additional risk. For example, in our org we don't allow our helpdesk/services team to directly modify groups or rules as the blast radius from a mistake to one of our larger groups here would be huge (think if our core group that assigns Google Workplace, HR tools, etc was accidentally modified - removing all memberships!), but they frequently have a strong need to modify or add new groups. By moving our infrastructure to Terraform the team can modify these plans and open a PR in Github to have their changes reviewed by another member of the team before being deployed.
+One of my main goals in moving our Okta infrastructure to Terraform was to allow non-Super Admins to contribute to resources that would otherwise be locked down, without incurring any additional risk. For example, in our org we don't allow our helpdesk/services team to directly modify groups or rules as the blast radius from a mistake to one of our larger groups here would be huge (think if our core group that assigns Google Workplace, HR tools, etc was accidentally modified - removing all memberships!), but they frequently have a strong need to modify or add new groups. By moving our infrastructure to Terraform the team can modify these plans and open a PR in Github to have their changes reviewed by another member of the team before being deployed.
 
 The issue we ran into here is that it's impossible to run `terraform plan` without at least having read access to any resource you want to work with. We solved this by making all of our Okta admins Read Only administrators, on top of their write permissions. However, the other issue we encountered is that even Read Only admins can't view the Administrators section of the Okta dashboard - so if you want to maintain configuration files for your admins (and I really think you should for strong auditability) you will hit a blocker here. 
 
