@@ -44,7 +44,7 @@ Here, we are creating our configuration for Terraform using the Okta provider, a
 __If you are also using S3 for the remote state please make sure you do not enable any public access to the bucket!__ When you have created the bucket in AWS - add the `bucket`, `region` and `key` values. You will notice that I am using `resource/state` for my key - this is related to separating SuperAdmin and non-SuperAdmin objects and I'll come back to that in a bit. You can explicitly set your AWS credentials in this file too if you want but by default Terraform will simply read your environment for an `AWS_PROFILE` variable and use that. 
 
 ###### _Credentials_
-Terraform will look for the `AWS_PROFILE` and `OKTA_API_TOKEN` variables in your environment for authentication so it may be advisable to add both of these to a `.env` file in the root of this repository and use `source .env` in terminal to set those. Just make sure you add `.env` to your `.gitignore` file so they don't get accidentally commited to your Github repo.
+Terraform will look for the `AWS_PROFILE` and `OKTA_API_TOKEN` variables in your environment for authentication so it may be advisable to add both of these to a `.env` file in the root of this repository and use `source .env` in terminal to set those. Just make sure you add `.env` to your `.gitignore` file so they don't get accidentally committed to your Github repo.
 
 Once you have got your `main.tf` file filled out with all the values for your environment, you can run `terraform init` in the root of your repo. Terraform will download the Okta provider and get itself configured.
 
