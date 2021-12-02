@@ -130,4 +130,4 @@ The two `main.tf` files are identical except for `key` in the S3 configuration. 
 #### Conclusion
 In this first part of our look at Terraform and Okta - we have created our basic configuration and created a pair of brand new resources in Okta. We have also talked about how we can empower non-SuperAdmins to contribute to our infrastructure without having full write permissions to sensitive elements within Okta. In the next post we will look at how we tackled importing existing resources from our Okta account into Terraform configurations and state. 
 
-If you have any questions in the meantime come hit me up in the [MacAdmins Slack](https://www.macadmins.org/) - [@tim.fitzgerald](https://macadmins.slack.com/team/U0HV0URL7).
+If you have any questions in the meantime come hit me up in the [MacAdmins Slack](https://www.macadmins.org/) - [@tim.fitzgerald](https://macadmins.slack.com/team/U0HV0URL7). Many thanks to Gabriel Sroka in MacAdmins for genersouly proof reading and providing very useful feedback. 
