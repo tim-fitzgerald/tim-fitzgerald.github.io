@@ -27,9 +27,9 @@ terraform {
   }
 
   backend "s3" {
-    bucket = <insert_bucket_name_here>
-    region = <insert_bucket_region_here>
-    key = "resources/state"
+    bucket  = <insert_bucket_name_here>
+    region  = <insert_bucket_region_here>
+    key     = "resources/state"
   }
 }
 
