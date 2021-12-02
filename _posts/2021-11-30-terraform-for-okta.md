@@ -58,13 +58,13 @@ Let's create a group and rule called Engineering Managers. You'll notice we set 
 ```terraform
 resource "okta_group" "engineering_managers" {
   name        = "Engineering Managers"
-  description	= "A group for all Engineering Managers"
+  description = "A group for all Engineering Managers"
   skip_users  = true
 }
 
 resurce "okta_group_rule" "engineering_managers_group_rule" {
   name              = "Engineering Managers - Group Rule"
-  group_assignments	= okta_group.engineering_managers.id
+  group_assignments = okta_group.engineering_managers.id
   expression_type   = "urn:okta:expression:1.0"
   expression_value  = "String.stringContains(user.title, \"Engineering Manager\")"
   status            = "ACTIVE"
