@@ -10,7 +10,7 @@ Getting started with using Terraform for Okta can be a bit confusing. There are 
 2. Needing a remote state to collaborate with others in my team.
 3. Wanting non-super admins to be able to contribute and `plan` their changes.
 
-With these requirements in mind - lets take a look at how we migrated our existing Okta account to being mostly managed via Terraform.
+With these requirements in mind - let's take a look at how we migrated our existing Okta account to being mostly managed via Terraform.
 
 In part 1 we will look at satisfying these requirements to create new resources and in the next post we will look at importing existing resources so they can be managed by Terraform instead.
 
@@ -49,11 +49,11 @@ Terraform will look for the `AWS_PROFILE` and `OKTA_API_TOKEN` variables in your
 Once you have got your `main.tf` file filled out with all the values for your environment, you can run `terraform init` in the root of your repo. Terraform will download the Okta provider and get itself configured.
 
 #### Creating a new resource
-Now that you have your base configuration done - we can create a new resource in Okta from Terraform. In this case lets create a new group and corresponding group rule directly from Terraform. You can choose what file structure works best for you - but in our case we have decided to pair groups and rules in the same `groups.tf` file as we rarely, if ever, create a group without a corresponding rule at our org. 
+Now that you have your base configuration done - we can create a new resource in Okta from Terraform. In this case let's create a new group and corresponding group rule directly from Terraform. You can choose what file structure works best for you - but in our case we have decided to pair groups and rules in the same `groups.tf` file as we rarely, if ever, create a group without a corresponding rule at our org. 
 
 Create the `groups.tf` file in the same directory as your `main.tf` file. It is extremely useful to have the [official Okta Terraform Provider docs ](https://registry.terraform.io/providers/okta/okta/latest/docs) open as you work here - it details all the possible attributes that we can pass to both the [`okta_group`](https://registry.terraform.io/providers/okta/okta/latest/docs/resources/group) and [`okta_group_rule`](https://registry.terraform.io/providers/okta/okta/latest/docs/resources/group_rule) resources.
 
-Lets create a group and rule called Engineering Managers. You'll notice we set `skip_users` to true. This tells Terraform that we won't be managing the membership of this group via Terraform, as we will be using a rule to do that. 
+Let's create a group and rule called Engineering Managers. You'll notice we set `skip_users` to true. This tells Terraform that we won't be managing the membership of this group via Terraform, as we will be using a rule to do that. 
 
 ```terraform
 resource "okta_group" "engineering_managers" {
@@ -71,7 +71,7 @@ resurce "okta_group_rule" "engineering_managers_group_rule" {
 }
 ```
 
-Here we have defined a group named "Engineering Managers", and a group rule named "Engineering Managers - Group Rule" that populates the former if any users title contains the words "Engineering Manager". You can see that in the `group_assignments` attribute, rather than explicitly having to retrieve and set the group ID - we can user Terraform to refer to the `id` value directly from the `engineering_managers` resource! This prevents our rule and group linking from being fragile, and means if we ever need to delete and recreate them they will be linked by default. You also need to make sure you escape the quotation marks within your rule's `expression_value` so that Terraform doesn't try to interpret it literally. 
+Here we have defined a group named "Engineering Managers", and a group rule named "Engineering Managers - Group Rule" that populates the former if any user's title contains the words "Engineering Manager". You can see that in the `group_assignments` attribute, rather than explicitly having to retrieve and set the group ID - we can use Terraform to refer to the `id` value directly from the `engineering_managers` resource! This prevents our rule and group linking from being fragile, and means if we ever need to delete and recreate them they will be linked by default. You also need to make sure you escape the quotation marks within your rule's `expression_value` so that Terraform doesn't try to interpret it literally. 
 
 Now that we have written our group and rule into our configuration, we can run `terraform plan` to see what Terraform _would do_ if we applied these configurations:
 
