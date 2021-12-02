@@ -57,17 +57,17 @@ Let's create a group and rule called Engineering Managers. You'll notice we set 
 
 ```terraform
 resource "okta_group" "engineering_managers" {
-	name		    = "Engineering Managers"
-	description	= "A group for all Engineering Managers"
-	skip_users	= true
+  name        = "Engineering Managers"
+  description	= "A group for all Engineering Managers"
+  skip_users  = true
 }
 
 resurce "okta_group_rule" "engineering_managers_group_rule" {
-	name				      = "Engineering Managers - Group Rule"
-	group_assignments	= okta_group.engineering_managers.id
-	expression_type		= "urn:okta:expression:1.0"
-	expression_value	= "String.stringContains(user.title, \"Engineering Manager\")"
-	status            = "ACTIVE"
+  name              = "Engineering Managers - Group Rule"
+  group_assignments	= okta_group.engineering_managers.id
+  expression_type   = "urn:okta:expression:1.0"
+  expression_value  = "String.stringContains(user.title, \"Engineering Manager\")"
+  status            = "ACTIVE"
 }
 ```
 
@@ -117,12 +117,12 @@ We solved for this by splitting our Terraform repo into two subdirectories. Our 
 ```shell
 project_root
 ├── admins
-	├── main.tf
-	├── admins.tf
+  ├── main.tf
+  ├── admins.tf
 ├── resources
-	├── main.tf
-	├── resources.tf
-	├── <other .tf files>
+  ├── main.tf
+  ├── resources.tf
+  ├── <other .tf files>
 ```
 
 The two `main.tf` files are identical except for `key` in the S3 configuration. As alluded to earlier - in the `resources/` folder we use the `resources/state` key, and in the `admins/` directory we use the `admins/state` key. These could also be something like `state_admins` and `state_resources` - it doesn't really matter so long as they're distinct.
