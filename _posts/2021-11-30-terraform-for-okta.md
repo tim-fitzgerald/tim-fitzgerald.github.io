@@ -3,6 +3,9 @@ layout: post
 title: "Getting started with Terraform for Okta - Part 1"
 date: 2021-11-30
 ---
+##### N.B.
+_The follow up to this guide [is now published](/2024/terraform-for-okta-part-two/) and has some important changes from this guide. If you are following up you should read both in their entirety first._
+
 #### Introduction
 Getting started with using Terraform for Okta can be a bit confusing. There are [a small few](https://developer.okta.com/blog/2020/02/03/managing-multiple-okta-instances-with-terraform-cloud) tutorials online already but none really dealt with my specific environment of:
 
