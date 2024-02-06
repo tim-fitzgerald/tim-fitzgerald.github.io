@@ -3,6 +3,7 @@ layout: default
 title: Tools & Skills
 permalink: /tools/
 ---
+A mixture of some of my preferred tools, and some of the areas I have become experienced in.
 
 ### Tools
 - NeoVim
@@ -14,7 +15,7 @@ permalink: /tools/
 ### Languages / Frameworks
 - Ruby
 - Python
-- Bash
+- Bash / Zsh
 - Go
 - Terraform HCL
 - Okta Workflows
@@ -29,5 +30,7 @@ permalink: /tools/
 - Kandji
 - Jamf
 - Kolide
+- macOS Administration
+- Linux Administration
 
 
