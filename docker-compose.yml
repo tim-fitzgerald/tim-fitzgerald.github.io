@@ -8,3 +8,7 @@ services:
       - 4000:4000
     volumes:
       - .:/srv/jekyll
+    environment:
+      - JEKYLL_UID=1000
+      - JEKYLL_GID=1000
+
