@@ -3,26 +3,38 @@ layout: default
 title: Tools & Skills
 permalink: /tools/
 ---
-A mixture of some of my preferred tools, and some of the areas I have become experienced in.
+A mixture of some of my preferred tools.
 
-### Tools
+### Editors
 - NeoVim
-- iTerm2
 - VS Code
 - Obsidian
-- Git
+
+### Terminals and Shells
+- iTerm2 (macOS)
+- Alacritty (Linux)
+- Zsh
 
 ### Languages / Frameworks
 - Ruby
 - Python
-- Bash / Zsh
 - Go
 - Terraform HCL
 - Okta Workflows
 - Okta Expression Language
 - Google Apps Manager (GAM)
 
-### Platforms
+### Misc Productivity
+- Hammerspoon
+- AltTab
+- KarabinerElements
+- Toshy
+
+### Hardware
+- Framework 14 (AMD) - Personal
+- MacBook M1/2/3/4/whatever - Work.
+
+### Platforms I have experience in running
 - Okta
 - AWS
 - Kubernetes (is this a 'platform'? Dont know where it fits. Its staying here for now)
@@ -30,7 +42,6 @@ A mixture of some of my preferred tools, and some of the areas I have become exp
 - Kandji
 - Jamf
 - Kolide
-- macOS Administration
-- Linux Administration
+- InTune
 
 
