@@ -31,8 +31,12 @@ A mixture of some of my preferred tools.
 - Toshy
 
 ### Hardware
-- Framework 14 (AMD) - Personal
-- MacBook M1/2/3/4/whatever - Work.
+- Framework 14 (AMD) - personal.
+- MacBook M1/2/3/4/whatever - work.
+
+### OS
+- Fedora 40+ - personal.
+- macOS - work.
 
 ### Platforms I have experience in running
 - Okta
